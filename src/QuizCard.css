@@ -7,6 +7,7 @@
     font-size: 14px;
     line-height: 1.43;
     border-radius: 4px;
+    margin: 5px;
 }
 
 .QuizCard-button-plus-frames {
@@ -27,4 +28,12 @@
 .QuizCard-button-correct {
     background-color: green;
     color: white;
+}
+
+.QuizCard-hidden {
+    display: none;
+}
+
+.QuizCard-movename {
+    margin: 10px;
 }
