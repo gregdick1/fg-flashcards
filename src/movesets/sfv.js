@@ -37,12 +37,12 @@ const moves = {
         },
         {
             "name": "Crouch Strong",
-            "gif": "https://gfycat.com/ifr/deliriousfilthyfieldspaniel",
+            "gif": "https://gfycat.com/ifr/feminineoblonggiantschnauzer",
             "frameAdvantage": 2
         },
         {
             "name": "Crouch Fierce",
-            "gif": "https://gfycat.com/ifr/mildtalkativeboaconstrictor",
+            "gif": "https://gfycat.com/ifr/nearashamedflies",
             "frameAdvantage": -10
         },
         {
@@ -52,12 +52,12 @@ const moves = {
         },
         {
             "name": "Crouch Forward",
-            "gif": "https://gfycat.com/ifr/tidymindlessfattaileddunnart",
+            "gif": "https://gfycat.com/ifr/informalplayfulhorse",
             "frameAdvantage": -3
         },
         {
             "name": "Crouch Roundhouse",
-            "gif": "https://gfycat.com/ifr/groundedorganicaustralianfreshwatercrocodile",
+            "gif": "https://gfycat.com/ifr/dangerousdentalbuck",
             "frameAdvantage": -11
         },
         {
