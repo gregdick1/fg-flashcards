@@ -1,0 +1,30 @@
+.QuizCard-button {
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.43;
+    border-radius: 4px;
+}
+
+.QuizCard-button-plus-frames {
+    background-color: white;
+    color: blue;
+}
+
+.QuizCard-button-minus-frames {
+    background-color: white;
+    color: red;
+}
+
+.QuizCard-button-wrong {
+    background-color: red;
+    color: white;
+}
+
+.QuizCard-button-correct {
+    background-color: green;
+    color: white;
+}
