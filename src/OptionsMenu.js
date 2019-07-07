@@ -1,6 +1,7 @@
 import React from "react"
 import { useStateValue } from './state'
 import { gameList, getCharacterList } from './movesets'
+import './OptionsMenu.css'
 
 export default function ConfigMenu() {
     const [{ config, quiz }, dispatch] = useStateValue();
@@ -48,22 +49,27 @@ export default function ConfigMenu() {
 
     return (!quiz.running &&
         <div>
-            <h2>Options</h2>
+            <h2>Frame Advantage Quiz</h2>
+            <table>
+                <tr>
+                    <td className="OptionsMenu-label-col"><label>Game</label></td>
+                    <td><select className="OptionsMenu-select" onChange={(e) => {handleChangeGame(e.target.value)}} value={config.game}>{gameOptions}</select></td>
+                </tr>
+                <tr>
+                    <td className="OptionsMenu-label-col"><label>Character</label></td>
+                    <td><select className="OptionsMenu-select" onChange={e => handleChangeCharacter(e.target.value)} value={config.character}>{characterOptions}</select></td>
+                </tr>
+                <tr>
+                    <td className="OptionsMenu-label-col"><label># of Questions</label></td>
+                    <td><input className="OptionsMenu-select" type="number" value={config.numberOfQuestions} onChange={e => handleChangeQuestions(e.target.value)} /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td className="OptionsMenu-hint"><span>Leave 0 or blank for endless quiz</span></td>
+                </tr>
+            </table>
             <div>
-                <span>Game:</span>
-                <select onChange={(e) => {handleChangeGame(e.target.value)}} value={config.game}>{gameOptions}</select>
-            </div>
-            <div>
-                <span>Character:</span>
-                <select onChange={e => handleChangeCharacter(e.target.value)} value={config.character}>{characterOptions}</select>
-            </div>
-            <div>
-                <span>Questions:</span>
-                <input type="number" value={config.numberOfQuestions} onChange={e => handleChangeQuestions(e.target.value)} />
-                <span>Leave 0 or blank for endless quiz</span>
-            </div>
-            <div>
-                <button onClick={() => handleStartQuiz()}>Start Quiz</button>
+                <button className="OptionsMenu-button" onClick={() => handleStartQuiz()}>Start Quiz</button>
             </div>
         </div>
     );

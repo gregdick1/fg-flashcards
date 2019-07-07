@@ -1,13 +1,44 @@
+.QuizCard-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 30px;
+}
+.QuizCard-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+.QuizCard-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.QuizCard-answers button {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 55px;
+}
+
 .QuizCard-button {
     display: inline-block;
     font-weight: normal;
     text-align: center;
-    border: 1px solid transparent;
-    padding: 6px 12px;
-    font-size: 14px;
+    border: 2px solid transparent;
+    padding: 8px 15px;
+    font-size: 20px;
     line-height: 1.43;
     border-radius: 4px;
-    margin: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.QuizCard-button-hidden {
+    visibility: hidden;
 }
 
 .QuizCard-button-plus-frames {
@@ -21,12 +52,26 @@
 }
 
 .QuizCard-button-wrong {
-    background-color: red;
+    background-color: #b01729;
     color: white;
+    border-color: white;
 }
 
 .QuizCard-button-correct {
-    background-color: green;
+    background-color: #285c36;
+    color: white;
+    border-color: white;
+}
+
+.QuizCard-button-exit {
+    background-color: white;
+    color: #242424;
+    border-color: #242424;
+}
+
+.QuizCard-button-next {
+    background-color: #2479d4;
+    border-color: white;
     color: white;
 }
 

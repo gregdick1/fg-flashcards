@@ -56,27 +56,28 @@ export default function QuizCard() {
         title += ` of ${config.numberOfQuestions}`
     }
     let secondary = `${quiz.correct} of ${quiz.answered} correct`
+    const nextClass = finished ? 'QuizCard-button QuizCard-button-next' : 'QuizCard-button QuizCard-button-hidden';
     
     return (quiz.running && !quiz.finished &&
         
         <div>
-            <h2>{title}</h2>
-            <h4>{secondary}</h4>
+            <div className="QuizCard-header">
+                <span>{title}</span>
+                <span>{secondary}</span>
+            </div>
+            
             <iframe title='Gif' src={quiz.currentMove.gif} frameBorder='0' scrolling='no' width='852' height='524'></iframe>
-            <iframe className="QuizCard-hidden" title='Hidden Gif' src={quiz.nextMove.gif} frameBorder='0' scrolling='no' width='640' height='404'></iframe>
-            <div>
-                <span className="QuizCard-movename">{quiz.currentMove.character}</span>
-                <span className="QuizCard-movename">{quiz.currentMove.name}</span></div>
-            <div>
-                {answerButtons}
+            <iframe className="QuizCard-hidden" title='Hidden Gif' src={quiz.nextMove.gif} frameBorder='0' scrolling='no' width='852' height='524'></iframe>
+            <div className="QuizCard-footer">
+                <span>{quiz.currentMove.character}</span>
+                <span>{quiz.currentMove.name}</span>
             </div>
-            <div>
-                {finished && 
-                    <button className="QuizCard-button" onClick={() => handleNext()}>Next</button>
-                }
-            </div>
-            <div>
-                <button className="QuizCard-button" onClick={() => handleEndQuiz()}>End Quiz</button>
+            <div className="QuizCard-buttons">
+                <button className="QuizCard-button QuizCard-button-exit" onClick={() => handleEndQuiz()}>End Quiz</button>
+                <span className="QuizCard-answers">
+                    {answerButtons}
+                </span>
+                <button className={nextClass} onClick={() => handleNext()}>Next</button>
             </div>
         </div>
         
