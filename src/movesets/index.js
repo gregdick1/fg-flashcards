@@ -11,6 +11,7 @@ Object.keys(data).forEach(game => {
         data[game][character].forEach(move => {
             move['game'] = game;
             move['character'] = character;
+            move['gif'] = move['gif']+'?hd=1&controls=0'
         });
     });
 });

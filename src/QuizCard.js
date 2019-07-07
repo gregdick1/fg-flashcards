@@ -62,7 +62,7 @@ export default function QuizCard() {
         <div>
             <h2>{title}</h2>
             <h4>{secondary}</h4>
-            <iframe title='Gif' src={quiz.currentMove.gif} frameBorder='0' scrolling='no' width='640' height='404'></iframe>
+            <iframe title='Gif' src={quiz.currentMove.gif} frameBorder='0' scrolling='no' width='852' height='524'></iframe>
             <iframe className="QuizCard-hidden" title='Hidden Gif' src={quiz.nextMove.gif} frameBorder='0' scrolling='no' width='640' height='404'></iframe>
             <div>
                 <span className="QuizCard-movename">{quiz.currentMove.character}</span>
