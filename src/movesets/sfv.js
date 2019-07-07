@@ -117,6 +117,18 @@ const moves = {
             "gif": "https://gfycat.com/ifr/spiritedsillyicelandichorse",
             "frameAdvantage": -4
         }
+    ],
+    "Cammy": [
+        {
+            "name": "Jab",
+            "gif": "https://gfycat.com/ifr/immaterialfrigidgermanshorthairedpointer",
+            "frameAdvantage": 2
+        },
+        {
+            "name": "Fierce",
+            "gif": "https://gfycat.com/ifr/speedypoliteflyingsquirrel",
+            "frameAdvantage": -3
+        }
     ]
 };
 export default moves;

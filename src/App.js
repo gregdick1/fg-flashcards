@@ -4,7 +4,7 @@ import ReportCard from './ReportCard.js';
 import OptionsMenu from './OptionsMenu.js';
 import './App.css';
 import { StateProvider } from './state'
-import { getNextMove } from './quiz.js'
+import { getNextMove, getFrameOptions } from './quiz.js'
 
 function App() {
   const initialState = {
@@ -20,7 +20,8 @@ function App() {
       correct: 0,
       missed: [],
       currentMove: null,
-      nextMove: null
+      nextMove: null,
+      possibleAnswers: []
     }
   }
 
@@ -51,6 +52,7 @@ function App() {
           }
         }
       case 'startQuiz':
+        const nextMove = getNextMove(state.config.game, state.config.character);
         return {
           ...state,
           quiz: {
@@ -59,8 +61,9 @@ function App() {
             answered: 0,
             correct: 0,
             missed: [],
-            currentMove: getNextMove(state.config.game, state.config.character),
-            nextMove: getNextMove(state.config.game, state.config.character)
+            currentMove: nextMove,
+            nextMove: getNextMove(state.config.game, state.config.character),
+            possibleAnswers: getFrameOptions(nextMove.frameAdvantage)
           }
         }
       case 'endQuiz':
@@ -77,7 +80,10 @@ function App() {
           quiz: {
             ...state.quiz,
             running:false,
-            finished:false
+            finished:false,
+            currentMove: null,
+            nextMove: null,
+            possibleAnswers: []
           }
         }
 
@@ -97,7 +103,8 @@ function App() {
             correct: numCorrect,
             missed: missed, 
             currentMove: state.quiz.nextMove,
-            nextMove: getNextMove(state.config.game, state.config.character)
+            nextMove: getNextMove(state.config.game, state.config.character),
+            possibleAnswers: getFrameOptions(state.quiz.nextMove.frameAdvantage)
           }
         };
       default:

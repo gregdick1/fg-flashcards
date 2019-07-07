@@ -6,7 +6,6 @@ import './QuizCard.css';
 export default function QuizCard() {
     const [{ quiz, config }, dispatch] = useStateValue();
     const [answered, setAnswered] = useState({});
-    const [possibleAnswers, setPossibleAnswers] = useState([]);
     const [wrong, setWrong] = useState(false);
     const [finished, setFinished] = useState(false);
     const [renderCounter, updateRenderCounter] = useState(0);
@@ -27,7 +26,6 @@ export default function QuizCard() {
 
     function handleNext() {
         dispatch({type: 'answered', correct: !wrong});
-        setPossibleAnswers([]);
         setAnswered({});
         setWrong(false);
         setFinished(false);
@@ -35,22 +33,13 @@ export default function QuizCard() {
 
     function handleEndQuiz() {
         dispatch({type: 'endQuiz'});
-        setPossibleAnswers([]);
         setAnswered({});
         setWrong(false);
         setFinished(false);
     }
 
-    if (possibleAnswers.length === 0 && quiz.currentMove !== null) {
-        getFrameOptions(quiz.currentMove.frameAdvantage).forEach(adv => {
-            possibleAnswers.push(adv);
-        });
-        setPossibleAnswers(possibleAnswers);
-    }
-    
-
     const answerButtons = [];
-    possibleAnswers.forEach(adv => {
+    quiz.possibleAnswers.forEach(adv => {
         let className = 'QuizCard-button';
         if (answered[adv.toString()] && adv === quiz.currentMove.frameAdvantage) {
             className += ' QuizCard-button-correct';
