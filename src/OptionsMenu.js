@@ -51,15 +51,15 @@ export default function ConfigMenu() {
         <div>
             <h2>Frame Advantage Quiz</h2>
             <table>
-                <tr>
+                <tr className="OptionsMenu-row">
                     <td className="OptionsMenu-label-col"><label>Game</label></td>
                     <td><select className="OptionsMenu-select" onChange={(e) => {handleChangeGame(e.target.value)}} value={config.game}>{gameOptions}</select></td>
                 </tr>
-                <tr>
+                <tr className="OptionsMenu-row">
                     <td className="OptionsMenu-label-col"><label>Character</label></td>
                     <td><select className="OptionsMenu-select" onChange={e => handleChangeCharacter(e.target.value)} value={config.character}>{characterOptions}</select></td>
                 </tr>
-                <tr>
+                <tr className="OptionsMenu-row">
                     <td className="OptionsMenu-label-col"><label># of Questions</label></td>
                     <td><input className="OptionsMenu-select" type="number" value={config.numberOfQuestions} onChange={e => handleChangeQuestions(e.target.value)} /></td>
                 </tr>
