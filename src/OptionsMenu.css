@@ -1,0 +1,52 @@
+.OptionsMenu-row {
+    height: 50px;
+}
+
+.OptionsMenu-select {
+    display: block;
+    width: 248px;
+    height: 26px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+    -webkit-box-sizing:content-box;
+}
+
+.OptionsMenu-label-col {
+    width: 34%;
+    text-align: right;
+    padding-right: 7px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.OptionsMenu-hint {
+    font-size: 12px;
+    text-align: left;
+    vertical-align: top;
+    font-style: italic;
+}
+
+.OptionsMenu-button {
+    margin-top: 15px;
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    border: 2px solid transparent;
+    padding: 8px 15px;
+    font-size: 20px;
+    line-height: 1.43;
+    border-radius: 4px;
+    background-color: #2479d4;
+    border-color: white;
+    color: white;
+    cursor: pointer;
+}
